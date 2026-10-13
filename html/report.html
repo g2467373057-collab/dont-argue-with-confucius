@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f1e5">
+  <title>你的哲学人格 · 别和孔子抬杠</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/report.css">
+</head>
+<body class="page-report">
+  <button id="btnHomeTop" class="report-home-btn" type="button" aria-label="返回首页">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 10.8 12 3l9 7.8"/>
+      <path d="M5.5 9.5V21h13V9.5"/>
+      <path d="M9.5 21v-6h5v6"/>
+    </svg>
+  </button>
+
+  <main id="reportPage" class="report-page">
+    <section id="reportHero" class="report-hero">
+      <div class="report-hero-overlay"></div>
+      <div class="report-hero-portrait-wrap">
+        <img id="reportPortrait" class="report-portrait" alt="哲学家立绘">
+      </div>
+      <div class="report-hero-content">
+        <p class="report-kicker">你的哲学人格报告</p>
+        <h1 id="heroName" class="report-hero-name">孔子</h1>
+        <p id="heroMeta" class="report-hero-meta">仁序圣者 · 东方·秩序</p>
+      </div>
+    </section>
+
+    <section class="report-card result-card">
+      <div class="result-row">
+        <img id="reportAvatar" class="result-avatar" alt="我的头像">
+        <div class="result-info">
+          <p class="result-label">你的本命哲学人格是：</p>
+          <h2 id="resultName" class="result-name">孔子</h2>
+          <p id="resultTitle" class="result-title">仁序圣者 · 仁序维度</p>
+          <p id="resultFit" class="result-fit"></p>
+        </div>
+      </div>
+      <div class="user-row">
+        <span id="resultUserName" class="user-chip">玩家</span>
+        <button id="btnShare" class="btn btn-primary btn-share" type="button">分享报告</button>
+      </div>
+      <p id="stageHint" class="stage-hint hidden"></p>
+    </section>
+
+    <section class="report-section">
+      <h2 class="section-title">思想量化占比</h2>
+      <p class="section-desc">根据你 10 章发言中的关键词，按各哲学家的思想特征估算</p>
+      <div id="scoreBars" class="score-bars"></div>
+    </section>
+
+    <section class="report-section">
+      <h2 class="section-title">哲学家解析</h2>
+      <article id="reportDetail" class="detail-card"></article>
+    </section>
+
+    <div class="report-actions">
+      <button id="btnReplay" class="btn btn-ghost-dark" type="button">重新挑战</button>
+      <button id="btnHome" class="btn btn-primary" type="button">返回首页</button>
+    </div>
+  </main>
+
+  <!-- 重新挑战确认 -->
+  <div id="replayModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="重新挑战">
+    <div class="modal">
+      <div class="modal-head">
+        <h2 class="modal-title">重新挑战？</h2>
+        <button id="btnCloseReplay" class="modal-close" type="button" aria-label="关闭">×</button>
+      </div>
+      <p class="modal-body-text">重新挑战将清空全部游戏进度，并回到首页重新开始。</p>
+      <div class="modal-foot">
+        <button id="btnReplayCancel" class="btn btn-ghost-dark" type="button">取消</button>
+        <button id="btnReplayConfirm" class="btn btn-danger" type="button">清空并重来</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 分享海报 -->
+  <div id="shareModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="分享报告">
+    <div class="modal modal-share">
+      <div class="modal-head">
+        <h2 class="modal-title">分享报告</h2>
+        <button id="btnCloseShare" class="modal-close" type="button" aria-label="关闭">×</button>
+      </div>
+      <div class="poster-wrap">
+        <img id="posterImage" alt="我的哲学人格报告图">
+      </div>
+      <p class="poster-hint">点击下方按钮保存图片，或长按图片保存到相册</p>
+      <div class="modal-foot">
+        <button id="btnDownloadPoster" class="btn btn-primary btn-block" type="button">保存图片</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="../js/assets.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/report.js"></script>
+</body>
+</html>
